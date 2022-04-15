@@ -45,6 +45,13 @@ public class BoardController {
 		return "/board/boardWrite";
 	}
 	
+	@RequestMapping("/board/openAcademyDumy.do")
+	public String openAcademyDumy() throws Exception {
+		log.debug("openAcademyDumy() invoked.");
+		
+		return "/board/academyDumy";
+	}
+	
 	@RequestMapping("/board/insertBoard.do")
 	// MultipartHttpServletRequest는 ServletRequest를 상속받아 구현된 인터페이스로 업로드된 파일을 처리하기 위한 여러가지 메소드를 제공
 	public String insertBoard(BoardDTO board, MultipartHttpServletRequest multipartHttpServletReq) throws Exception {
